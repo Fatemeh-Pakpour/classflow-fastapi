@@ -1,0 +1,28 @@
+[project]
+name = "classflow-fastapi"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Fatemeh Pakpour", email = "49231214+Fatemeh-Pakpour@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.162.5",
+    "pydantic-settings>=2.16.2",
+]
+
+[project.scripts]
+classflow-fastapi = "classflow_fastapi:main"
+
+[build-system]
+requires = ["uv_build>=0.10.1,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
